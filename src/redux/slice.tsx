@@ -22,6 +22,8 @@ const initialState = {
   filterClass: [] as any[],
   filterCompasity: [] as any[],
 
+  filteredItems: [] as any[],
+
   functionsList: functionArray,
   sortKey: '',
   numberOfItemsShow: 3,
@@ -48,6 +50,10 @@ const washersSlice = createSlice({
       state.filterCompasity = [];
       state.filterCompasity.push(action.payload);
     },
+    updateFilteredItems: (state, action) => {
+      state.filteredItems = [];
+      state.filteredItems.push(action.payload);
+    },
     sort: (state, action) => {
       const key  = action.payload;
       state.sortKey = key
@@ -61,5 +67,5 @@ const washersSlice = createSlice({
   },
 });
 
-export const { search, sort, updateNumberOfItemsSow, updateResultNumber, filterFunctions, filterClass, filterCompasity } = washersSlice.actions;
+export const { search, sort, updateNumberOfItemsSow, updateResultNumber, filterFunctions, filterClass, filterCompasity,updateFilteredItems } = washersSlice.actions;
 export default washersSlice.reducer;

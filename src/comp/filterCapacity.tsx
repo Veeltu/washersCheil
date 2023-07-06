@@ -1,6 +1,6 @@
 import "./search.css";
 import { useSelector, useDispatch } from "react-redux";
-import { search } from "../redux/slice";
+import { filterCompasity } from "../redux/slice";
 
 export default function FilterCapacity() {
   const washers = useSelector((state: any) => state.washers.washers);
@@ -12,10 +12,8 @@ export default function FilterCapacity() {
         washer.capacity.includes(filterValue)
       );
 
-      dispatch(search(matched));
-    } else {
-      dispatch(search(washers));
-    }
+      dispatch(filterCompasity(matched));
+    } 
   };
 
   return (

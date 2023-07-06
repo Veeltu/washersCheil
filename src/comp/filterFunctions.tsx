@@ -1,6 +1,6 @@
 import "./search.css";
 import { useSelector, useDispatch } from "react-redux";
-import { search } from "../redux/slice";
+import { filterFunctions } from "../redux/slice";
 
 export default function FilterFunctions() {
   const washers = useSelector((state: any) => state.washers.washers);
@@ -15,10 +15,8 @@ export default function FilterFunctions() {
         washer.functions.includes(filterValue)
       );
 
-      dispatch(search(matched));
-    } else {
-      dispatch(search(washers));
-    }
+      dispatch(filterFunctions(matched));
+    }  
   };
 
   return (

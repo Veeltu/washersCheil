@@ -1,9 +1,12 @@
 import VectorArrow from "../assets/VectorArrow.png";
 import { useSelector, useDispatch } from "react-redux";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { updateResultNumber } from "../redux/slice";
+import { updateFilteredItems } from "../redux/slice";
 
 export default function Card() {
+  // const [sumFilters, setSumFilters] = useState();
+
   const washers = useSelector((state: any) => state.washers.washers);
   const key = useSelector((state: any) => state.washers.sortKey);
   const searchedWashers = useSelector(
@@ -12,7 +15,29 @@ export default function Card() {
   const numberOfItemsShow = useSelector(
     (state: any) => state.washers.numberOfItemsShow
   );
+  const filterFunctions = useSelector(
+    (state: any) => state.washers.filterFunctions
+  );
+  const filterClass = useSelector((state: any) => state.washers.filterClass);
+  const filterCompasity = useSelector(
+    (state: any) => state.washers.filterCompasity
+  );
+  const filteredItems = useSelector(
+    (state: any) => state.washers.filteredItems
+  );
   const dispatch = useDispatch();
+
+  //===================================================
+
+console.log(filterFunctions)
+
+    const allItems = [];
+    // allItems.push({...filterCompasity}, {...filterClass}, {...filterCompasity})
+    // allItems.push(filterCompasity, filterClass, filterCompasity)
+    allItems.push(filterCompasity)
+    
+    console.log(allItems);
+   
 
   const sortedWashers = [...washers].sort((a: any, b: any) => {
     if (a[key] < b[key]) return -1;
@@ -31,7 +56,9 @@ export default function Card() {
   const displayedWashers =
     searchedWashers.length === 0 ? sortedWashers : sortedSearchedWashers;
 
-    dispatch(updateResultNumber(displayedWashers.length))
+    useEffect(() => {
+      dispatch(updateResultNumber(displayedWashers.length));
+    }, [displayedWashers.length]);
 
   const itemsToShow = useMemo(() => {
     return displayedWashers.slice(0, numberOfItemsShow).map((e) => (
@@ -79,9 +106,5 @@ export default function Card() {
     ));
   }, [displayedWashers, numberOfItemsShow]);
 
-  return (
-    <>
-      {itemsToShow.length ? itemsToShow : "Loading..."}
-    </>
-  );
+  return <>{itemsToShow.length ? itemsToShow : "Loading..."}</>;
 }
