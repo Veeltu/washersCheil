@@ -1,0 +1,677 @@
+{
+    "washers": [
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t986ashs6-ww90t986ash-s6-frontwhite-thumb-304036689?$252_252_PNG$",
+        "title": "WW90T986ASH, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Drzwi AddWash",
+          "Panel AI Control",
+          "Silnik Inwerterowy",
+          "Wyświetlacz elektroniczny"
+        ],
+        "class": "D",
+        "valid": "15.09.2022 - 21.09.2022",
+        "price": "3199",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t754abhs6-ww90t754abh-s6-frontwhite-thumb-305164202?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "01.10.2022 - 10.10.2022",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bb944dgms6/gallery/pl-ww9400b-433208-ww11bb944dgms6-thumb-533414087?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A++",
+        "valid": "05.11.2022 - 15.11.2022",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t954asxs6-ww90t954asx-s6-frontplatinumsilver-thumb-304574281?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "20.12.2022 - 31.12.2022",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t552dtws6-ww70t552dtw-s6-frontwhite-thumb-300083067?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.01.2023 - 10.01.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t552daes6-ww70t552dae-s6-frontwhite-thumb-305212670?$252_252_PNG$",
+        "title": "123XYZ Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "05.02.2023 - 15.02.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/wf18t8000gv-eo/gallery/pl-front-loading-washer-wf18t8000gveu-wf18t8000gv-eo-thumb-511457133?$252_252_PNG$",
+        "title": "456ABC Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "B++",
+        "valid": "20.03.2023 - 31.03.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t954ashs6-ww90t954ash-s6-frontwhite-thumb-304748752?$252_252_PNG$",
+        "title": "789PQR Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "B+",
+        "valid": "01.04.2023 - 10.04.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026theo-ww80ta026th-eo-frontwhite-thumb-304653249?$252_252_PNG$",
+        "title": "321MNO Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "C++",
+        "valid": "05.05.2023 - 15.05.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70ta026ateo-ww70ta026at-eo-frontwhite-thumb-311494903?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "20.06.2023 - 30.06.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t534daes6-ww90t534dae-s6-frontwhite-thumb-292979885?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "C++",
+        "valid": "01.07.2023 - 10.07.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80t554daes6-ww80t554dae-s6-frontwhite-thumb-299576774?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "B+",
+        "valid": "15.08.2023 - 25.08.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww8nk52e0vweo-ww8nk52e0vw-eo-frontwhite-thumb-316110097?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.09.2023 - 10.09.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bb744dges6/gallery/pl-ww7400b-432776-ww11bb744dges6-thumb-533338829?$252_252_PNG$",
+        "title": "123XYZ Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "15.10.2023 - 25.10.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70ta026tteo-ww70ta026tt-eo-frontwhite-thumb-311544496?$252_252_PNG$",
+        "title": "456ABC Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A++",
+        "valid": "01.11.2023 - 10.11.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww90t504dat-s6/gallery/pl-front-loading-washer-ww85t504dae-ww90t504dat-s6-thumb-469754839?$252_252_PNG$",
+        "title": "789PQR Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "15.12.2023 - 25.12.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80t954ashs6-ww80t954ash-s6-frontwhite-thumb-304556036?$252_252_PNG$",
+        "title": "321MNO Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.01.2024 - 10.01.2024",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026teeo-ww80ta026te-eo-frontwhite-thumb-314966896?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "15.02.2024 - 25.02.2024",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t554daes6-ww70t554dae-s6-frontwhite-thumb-299685646?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A",
+        "valid": "01.03.2024 - 10.03.2024",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026aeeo-ww80ta026ae-eo-frontwhite-thumb-316245049?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "15.04.2024 - 25.04.2024",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bga046aeeo/gallery/pl-front-loading-washer-ww80ta046aeef-428810-ww11bga046aeeo-thumb-532961690?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.05.2024 - 10.05.2024",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t986ashs6-ww90t986ash-s6-frontwhite-thumb-304036689?$252_252_PNG$",
+        "title": "WW90T986ASH, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Drzwi AddWash",
+          "Panel AI Control",
+          "Silnik Inwerterowy",
+          "Wyświetlacz elektroniczny"
+        ],
+        "class": "D",
+        "valid": "15.09.2022 - 21.09.2022",
+        "price": "3199",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t754abhs6-ww90t754abh-s6-frontwhite-thumb-305164202?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "01.10.2022 - 10.10.2022",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bb944dgms6/gallery/pl-ww9400b-433208-ww11bb944dgms6-thumb-533414087?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A++",
+        "valid": "05.11.2022 - 15.11.2022",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t954asxs6-ww90t954asx-s6-frontplatinumsilver-thumb-304574281?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "20.12.2022 - 31.12.2022",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t552dtws6-ww70t552dtw-s6-frontwhite-thumb-300083067?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.01.2023 - 10.01.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t552daes6-ww70t552dae-s6-frontwhite-thumb-305212670?$252_252_PNG$",
+        "title": "123XYZ Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "05.02.2023 - 15.02.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/wf18t8000gv-eo/gallery/pl-front-loading-washer-wf18t8000gveu-wf18t8000gv-eo-thumb-511457133?$252_252_PNG$",
+        "title": "456ABC Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "B++",
+        "valid": "20.03.2023 - 31.03.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t954ashs6-ww90t954ash-s6-frontwhite-thumb-304748752?$252_252_PNG$",
+        "title": "789PQR Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "B+",
+        "valid": "01.04.2023 - 10.04.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026theo-ww80ta026th-eo-frontwhite-thumb-304653249?$252_252_PNG$",
+        "title": "321MNO Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "C++",
+        "valid": "05.05.2023 - 15.05.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70ta026ateo-ww70ta026at-eo-frontwhite-thumb-311494903?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "20.06.2023 - 30.06.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww90t534daes6-ww90t534dae-s6-frontwhite-thumb-292979885?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "C++",
+        "valid": "01.07.2023 - 10.07.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80t554daes6-ww80t554dae-s6-frontwhite-thumb-299576774?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "B+",
+        "valid": "15.08.2023 - 25.08.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww8nk52e0vweo-ww8nk52e0vw-eo-frontwhite-thumb-316110097?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.09.2023 - 10.09.2023",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bb744dges6/gallery/pl-ww7400b-432776-ww11bb744dges6-thumb-533338829?$252_252_PNG$",
+        "title": "123XYZ Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "15.10.2023 - 25.10.2023",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70ta026tteo-ww70ta026tt-eo-frontwhite-thumb-311544496?$252_252_PNG$",
+        "title": "456ABC Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A++",
+        "valid": "01.11.2023 - 10.11.2023",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww90t504dat-s6/gallery/pl-front-loading-washer-ww85t504dae-ww90t504dat-s6-thumb-469754839?$252_252_PNG$",
+        "title": "789PQR Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "15.12.2023 - 25.12.2023",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80t954ashs6-ww80t954ash-s6-frontwhite-thumb-304556036?$252_252_PNG$",
+        "title": "321MNO Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.01.2024 - 10.01.2024",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026teeo-ww80ta026te-eo-frontwhite-thumb-314966896?$252_252_PNG$",
+        "title": "XYZ123 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "8",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Quick Wash",
+          "Delay Start",
+          "Auto Clean",
+          "LED Display"
+        ],
+        "class": "A+",
+        "valid": "15.02.2024 - 25.02.2024",
+        "price": "1999",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww70t554daes6-ww70t554dae-s6-frontwhite-thumb-299685646?$252_252_PNG$",
+        "title": "ABC456 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "6",
+        "measurements": "45 x 50 x 55 cm",
+        "functions": [
+          "Steam Wash",
+          "Smart Control",
+          "Inverter Motor",
+          "Touchscreen Display"
+        ],
+        "class": "A",
+        "valid": "01.03.2024 - 10.03.2024",
+        "price": "2599",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/pl-washer-ww80ta026aeeo-ww80ta026ae-eo-frontwhite-thumb-316245049?$252_252_PNG$",
+        "title": "PQR789 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "7",
+        "measurements": "50 x 55 x 60 cm",
+        "functions": [
+          "Allergy Wash",
+          "Time Delay",
+          "Energy Efficient",
+          "Digital Controls"
+        ],
+        "class": "A+",
+        "valid": "15.04.2024 - 25.04.2024",
+        "price": "1499",
+        "rates": "53,31 zł x 60 rat"
+      },
+      {
+        "image": "//images.samsung.com/is/image/samsung/p6pim/pl/ww11bga046aeeo/gallery/pl-front-loading-washer-ww80ta046aeef-428810-ww11bga046aeeo-thumb-532961690?$252_252_PNG$",
+        "title": "MNO321 Washer, Pralka QuickDrive™, 9 kg, biała",
+        "capacity": "9",
+        "measurements": "55 x 60 x 65 cm",
+        "functions": [
+          "Quick Wash",
+          "Steam Clean",
+          "Smart Diagnosis",
+          "LED Display"
+        ],
+        "class": "A++",
+        "valid": "01.05.2024 - 10.05.2024",
+        "price": "2899",
+        "rates": "53,31 zł x 60 rat"
+      }
+    ]
+  }
+  

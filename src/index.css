@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif ; */
+  font-family: Roboto;
+
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #F8F8F8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-size: 2.5rem;
+  /* font-family: SamsungOne; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+h3 {
+  color: #767676;
+  font-size: 0.75rem;
+  font-family: SamsungOne;
+  line-height: 1.125rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ==============> MY CSS <============ */
+
+.card {
+  /* max-height: 37.5rem; */
+  height: 37.5rem;
+  max-width: 21rem;
+  border-radius: 20px;
+  padding: 1.5625rem 1.5rem;
+  /* margin: 25px; */
+  gap: 0.625rem;
+  background-color: #ffffff;
+  color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  & ul {
+    list-style: none;
+    padding: 0;
+  }
+  & li {
+    display: flex;
+    flex-direction: row;
+    color: #767676;
+    font-size: 0.75rem;
+    font-family: SamsungOne;
+    line-height: 1.125rem;
+    font-weight: 400;
+    & span {
+      color: black;
+      font-weight: 800;
+    }
+  }
+}
+.title {
+  width: 15rem;
+  margin-bottom: 1.8rem;
+}
+.image-container {
+  height: 12.5rem;
+  width: 100%;
+}
+#img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.class-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+.energy-class {
+  position: relative;
+  height: 20px;
+  width: 100px;
+}
+.arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.class {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  left: 5px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.price-box {
+  & h3 {
+    line-height: 1;
+  }
+}
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  & .zl {
+    height: 31px;
+    line-height: 1;
+    margin-left: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    width: 20px;
+  }
+}
+.button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & button {
+    background: var(--basic-samsung-colors-samsung-blue, #1428a0);
+    border-radius: 24px;
+    color: white;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    /* width: 10rem; */
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+/* ===========global css */
+.app {
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cards {
+  display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+
+}
+.header-text{
+  background-color: #fff;
+  height: 4rem;
+  width: 100%;
+}
+.container-flex{
+  max-width: 1100px;
+}
+/* ===+++FILTERS+++=== */
+select {
+  outline: 0;
+  display: flex;
+  width: 15.5625rem;
+  padding: 0.5rem 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  background: #FFF;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.name-select{
+  margin-bottom: 0.44rem;
+}
+.filters{
+
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 0.62rem;
+
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.show-more-button{
+ margin-top: 1.25rem;
+ margin-bottom: 3.38rem;
+  text-align: center;
+  bottom: 5rem;
+  color:#007AFF ;
+  cursor: pointer;
+}
+
+.result-number {
+  margin: 1rem;
+  color: #000;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.375rem;
+}
+@media (min-width: 660px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .filters { grid-template-columns: repeat(2, 1fr);}
+}
+@media (min-width: 1060px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .filters { grid-template-columns: repeat(4, 1fr);}
+}
+
