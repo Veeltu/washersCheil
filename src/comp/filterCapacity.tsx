@@ -1,19 +1,20 @@
 import "./search.css";
 import { useSelector, useDispatch } from "react-redux";
-import { filterCompasity } from "../redux/slice";
+import { filterCompasity, updateFilterCompasityTarget } from "../redux/slice";
 
 export default function FilterCapacity() {
   const washers = useSelector((state: any) => state.washers.washers);
   const dispatch = useDispatch();
 
   const handleFilter = (filterValue: string) => {
-    if (filterValue) {
-      const matched = washers.filter((washer: any) =>
-        washer.capacity.includes(filterValue)
-      );
+    // if (filterValue) {
+    //   const matched = washers.filter((washer: any) =>
+    //     washer.capacity.includes(filterValue)
+    //   );
 
-      dispatch(filterCompasity(matched));
-    } 
+    //   dispatch(filterCompasity(matched));
+    // } 
+    dispatch(updateFilterCompasityTarget(filterValue))
   };
 
   return (

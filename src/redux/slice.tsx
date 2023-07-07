@@ -11,6 +11,7 @@ washers.washers.forEach((washer) => {
 });
 
 const functionArray = Array.from(allFunctions);
+
 // ============================
 
 const initialState = {
@@ -22,10 +23,17 @@ const initialState = {
   filterClass: [] as any[],
   filterCompasity: [] as any[],
 
+  filterFunctionTarget: "Time Delay",
+  // filterFunctionTarget: "",
+  filterCLassTarget: "",
+  filterCompasityTarget: "",
+
   filteredItems: [] as any[],
 
+  productNotMatch: false,
+
   functionsList: functionArray,
-  sortKey: '',
+  sortKey: "",
   numberOfItemsShow: 3,
   resultNumber: 0,
 };
@@ -38,34 +46,59 @@ const washersSlice = createSlice({
       state.searchedWashers = [];
       state.searchedWashers.push(action.payload);
     },
-    filterFunctions: (state, action) => {
-      state.filterFunctions = [];
-      state.filterFunctions.push(action.payload);
+    updateFilterFunctions: (state, action) => {
+      state.filterFunctions = action.payload;
     },
-    filterClass: (state, action) => {
-      state.filterClass = [];
-      state.filterClass.push(action.payload);
+    updateFilterClass: (state, action) => {
+      state.filterClass = action.payload;
     },
     filterCompasity: (state, action) => {
-      state.filterCompasity = [];
-      state.filterCompasity.push(action.payload);
+      state.filterCompasity = action.payload;
     },
     updateFilteredItems: (state, action) => {
-      state.filteredItems = [];
-      state.filteredItems.push(action.payload);
+      state.filteredItems = action.payload;
     },
     sort: (state, action) => {
-      const key  = action.payload;
-      state.sortKey = key
+      const key = action.payload;
+      state.sortKey = key;
     },
     updateNumberOfItemsSow: (state, action) => {
-      state.numberOfItemsShow = action.payload
+      state.numberOfItemsShow = action.payload;
     },
     updateResultNumber: (state, action) => {
-      state.resultNumber = action.payload
-    }
+      state.resultNumber = action.payload;
+    },
+    updateProductNotMatch: (state, action) => {
+      state.productNotMatch = action.payload
+    },
+    updateFilterFunctionTarget: (state, action) => {
+      state.filterFunctionTarget = action.payload
+    },
+    updateFilterClassTarget: (state, action) => {
+      state.filterCLassTarget = action.payload
+    },
+    updateFilterCompasityTarget: (state, action) => {
+      state.filterCompasityTarget = action.payload
+    },
   },
 });
 
-export const { search, sort, updateNumberOfItemsSow, updateResultNumber, filterFunctions, filterClass, filterCompasity,updateFilteredItems } = washersSlice.actions;
+export const {
+  search,
+  sort,
+
+  updateNumberOfItemsSow,
+  updateResultNumber,
+  updateFilterFunctions,
+  updateFilterClass,
+  filterCompasity,
+
+  updateFilteredItems,
+
+  updateProductNotMatch,
+
+  updateFilterFunctionTarget,
+  updateFilterClassTarget,
+  updateFilterCompasityTarget
+} = washersSlice.actions;
 export default washersSlice.reducer;

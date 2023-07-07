@@ -1,12 +1,18 @@
 import VectorArrow from "../assets/VectorArrow.png";
 import { useSelector, useDispatch } from "react-redux";
 import { useMemo, useState, useEffect } from "react";
-import { updateResultNumber } from "../redux/slice";
+import { updateFilterFunctions, updateResultNumber } from "../redux/slice";
 import { updateFilteredItems } from "../redux/slice";
 
-export default function Card() {
-  // const [sumFilters, setSumFilters] = useState();
+import {
+  updateFilterClass,
+  updateProductNotMatch,
+} from "../redux/slice";
 
+export default function Card() {
+  const productNotMatch = useSelector(
+    (state: any) => state.washers.productNotMatch
+  );
   const washers = useSelector((state: any) => state.washers.washers);
   const key = useSelector((state: any) => state.washers.sortKey);
   const searchedWashers = useSelector(
@@ -25,43 +31,51 @@ export default function Card() {
   const filteredItems = useSelector(
     (state: any) => state.washers.filteredItems
   );
+  const filterFunctionTarget = useSelector((state: any) => state.washers.filterFunctionTarget)
+  const filterClassTarget = useSelector((state: any) => state.washers.filterCLassTarget)
+  const filterCompasityTarget = useSelector((state: any) => state.washers.filterCompasityTarget)
+  
   const dispatch = useDispatch();
 
-  //===================================================
+useEffect(() => {
+    dispatch(updateFilteredItems(washers));
+    dispatch(updateFilterFunctions(washers))
+  }, []);
 
-console.log(filterFunctions)
+  //1 step-filter
+  useEffect(() => {
+    filterFunctions.length !== 0
+    ? dispatch(updateFilteredItems(filterFunctions))
+    : {};
+  }, [filterFunctions]);
+  //2 setp-filter
+  useEffect(() => {
+    if (filterClass.length !== 0) dispatch(updateFilteredItems(filterClass));
+  }, [filterClass]);
+  //3 step-filter
+  useEffect(() => {
+    if (filterCompasity.length !== 0)
+    dispatch(updateFilteredItems(filterCompasity));
+  }, [filterCompasity]);
+  
+  // console.log(`filterClass ${filterClass.length}`)
+  // console.log(`filteredItems => ${filteredItems.length}`);
+  // console.log(`filterFunctions => ${filterFunctions.length}`)
 
-    const allItems = [];
-    // allItems.push({...filterCompasity}, {...filterClass}, {...filterCompasity})
-    // allItems.push(filterCompasity, filterClass, filterCompasity)
-    allItems.push(filterCompasity)
-    
-    console.log(allItems);
-   
-
-  const sortedWashers = [...washers].sort((a: any, b: any) => {
+  const sortedSearchedWashers = filteredItems.flat().sort((a: any, b: any) => {
     if (a[key] < b[key]) return -1;
     if (a[key] > b[key]) return 1;
     return 0;
   });
 
-  const sortedSearchedWashers = [...searchedWashers]
-    .flat()
-    .sort((a: any, b: any) => {
-      if (a[key] < b[key]) return -1;
-      if (a[key] > b[key]) return 1;
-      return 0;
-    });
+  const displayedWashers = sortedSearchedWashers;
 
-  const displayedWashers =
-    searchedWashers.length === 0 ? sortedWashers : sortedSearchedWashers;
-
-    useEffect(() => {
-      dispatch(updateResultNumber(displayedWashers.length));
-    }, [displayedWashers.length]);
+  useEffect(() => {
+    dispatch(updateResultNumber(displayedWashers.length));
+  }, [displayedWashers.length]);
 
   const itemsToShow = useMemo(() => {
-    return displayedWashers.slice(0, numberOfItemsShow).map((e) => (
+    return displayedWashers.slice(0, numberOfItemsShow).map((e: any) => (
       <div className="card" key={Math.random()}>
         <div className="image-container">
           <img src={e.image} id="img" />
@@ -106,5 +120,33 @@ console.log(filterFunctions)
     ));
   }, [displayedWashers, numberOfItemsShow]);
 
-  return <>{itemsToShow.length ? itemsToShow : "Loading..."}</>;
+  // {itemsToShow.length ? itemsToShow : "Loading..."}
+// =============================================================  
+
+function MaxFilter() {
+
+  const filter = washers.filter((e: any) => {
+    e.functions.includes(filterFunctionTarget)
+  })
+  return filter
+}
+
+console.log(`filterFunctionTarget => ${filterFunctionTarget}`)
+console.log(`maxfilter ===> ${MaxFilter()}`)
+ 
+  return (
+    <>
+      {productNotMatch != true ? (
+        itemsToShow.length ? (
+          itemsToShow
+        ) : (
+          "Loading..."
+        )
+      ) : (
+        <div>
+          <h1>filter not match</h1>
+        </div>
+      )}
+    </>
+  );
 }
