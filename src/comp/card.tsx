@@ -1,13 +1,8 @@
 import VectorArrow from "../assets/VectorArrow.png";
 import { useSelector, useDispatch } from "react-redux";
 import { useMemo, useState, useEffect } from "react";
-import { updateFilterFunctions, updateResultNumber } from "../redux/slice";
-import { updateFilteredItems } from "../redux/slice";
-
-import {
-  updateFilterClass,
-  updateProductNotMatch,
-} from "../redux/slice";
+import { updateResultNumber } from "../redux/slice";
+import { updateProductNotMatch } from "../redux/slice";
 
 export default function Card() {
   const productNotMatch = useSelector(
@@ -15,54 +10,58 @@ export default function Card() {
   );
   const washers = useSelector((state: any) => state.washers.washers);
   const key = useSelector((state: any) => state.washers.sortKey);
-  const searchedWashers = useSelector(
-    (state: any) => state.washers.searchedWashers
-  );
   const numberOfItemsShow = useSelector(
     (state: any) => state.washers.numberOfItemsShow
   );
-  const filterFunctions = useSelector(
-    (state: any) => state.washers.filterFunctions
+  const filterFunctionTarget = useSelector(
+    (state: any) => state.washers.filterFunctionTarget
   );
-  const filterClass = useSelector((state: any) => state.washers.filterClass);
-  const filterCompasity = useSelector(
-    (state: any) => state.washers.filterCompasity
+  const filterClassTarget = useSelector(
+    (state: any) => state.washers.filterCLassTarget
   );
-  const filteredItems = useSelector(
-    (state: any) => state.washers.filteredItems
+  const filterCapasityTarget = useSelector(
+    (state: any) => state.washers.filterCapasityTarget
   );
-  const filterFunctionTarget = useSelector((state: any) => state.washers.filterFunctionTarget)
-  const filterClassTarget = useSelector((state: any) => state.washers.filterCLassTarget)
-  const filterCompasityTarget = useSelector((state: any) => state.washers.filterCompasityTarget)
-  
+  const filterUsed = useSelector((state: any) => state.washers.filterUsed);
   const dispatch = useDispatch();
 
-useEffect(() => {
-    dispatch(updateFilteredItems(washers));
-    dispatch(updateFilterFunctions(washers))
+  const [match, setMatch] = useState([]);
+
+  useEffect(() => {
+    setMatch(washers);
   }, []);
 
-  //1 step-filter
-  useEffect(() => {
-    filterFunctions.length !== 0
-    ? dispatch(updateFilteredItems(filterFunctions))
-    : {};
-  }, [filterFunctions]);
-  //2 setp-filter
-  useEffect(() => {
-    if (filterClass.length !== 0) dispatch(updateFilteredItems(filterClass));
-  }, [filterClass]);
-  //3 step-filter
-  useEffect(() => {
-    if (filterCompasity.length !== 0)
-    dispatch(updateFilteredItems(filterCompasity));
-  }, [filterCompasity]);
+  const handleFilter = () => {
+    const match = washers.filter((item: any) => {
+      const some =
   
-  // console.log(`filterClass ${filterClass.length}`)
-  // console.log(`filteredItems => ${filteredItems.length}`);
-  // console.log(`filterFunctions => ${filterFunctions.length}`)
+        (filterFunctionTarget !== "#"
+          ? item.functions.includes(filterFunctionTarget)
+          : true) &&
+        (filterCapasityTarget !== "#"
+          ? item.capacity.includes(filterCapasityTarget)
+          : true) &&
+        (filterClassTarget !== "#"
+          ? item.class.includes(filterClassTarget)
+          : true);
 
-  const sortedSearchedWashers = filteredItems.flat().sort((a: any, b: any) => {
+      return some;
+    });
+
+    if (filterUsed == true && match.length == 0) {
+      console.log("BOOOOM");
+      dispatch(updateProductNotMatch(true));
+    } else if (filterUsed == true && match.length > 0) {
+      dispatch(updateProductNotMatch(false));
+      setMatch(match);
+    }
+  };
+
+  useEffect(() => {
+    handleFilter();
+  }, [filterFunctionTarget, filterClassTarget, filterCapasityTarget]);
+
+  const sortedSearchedWashers = match.flat().sort((a: any, b: any) => {
     if (a[key] < b[key]) return -1;
     if (a[key] > b[key]) return 1;
     return 0;
@@ -120,20 +119,6 @@ useEffect(() => {
     ));
   }, [displayedWashers, numberOfItemsShow]);
 
-  // {itemsToShow.length ? itemsToShow : "Loading..."}
-// =============================================================  
-
-function MaxFilter() {
-
-  const filter = washers.filter((e: any) => {
-    e.functions.includes(filterFunctionTarget)
-  })
-  return filter
-}
-
-console.log(`filterFunctionTarget => ${filterFunctionTarget}`)
-console.log(`maxfilter ===> ${MaxFilter()}`)
- 
   return (
     <>
       {productNotMatch != true ? (

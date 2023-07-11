@@ -19,16 +19,13 @@ const initialState = {
 
   searchedWashers: [] as any[],
 
-  filterFunctions: [] as any[],
-  filterClass: [] as any[],
-  filterCompasity: [] as any[],
-
-  filterFunctionTarget: "Time Delay",
-  // filterFunctionTarget: "",
-  filterCLassTarget: "",
-  filterCompasityTarget: "",
+  filterFunctionTarget: "#",
+  filterCLassTarget: "#",
+  filterCapasityTarget: "#",
 
   filteredItems: [] as any[],
+
+  filterUsed: false,
 
   productNotMatch: false,
 
@@ -45,15 +42,6 @@ const washersSlice = createSlice({
     search: (state, action) => {
       state.searchedWashers = [];
       state.searchedWashers.push(action.payload);
-    },
-    updateFilterFunctions: (state, action) => {
-      state.filterFunctions = action.payload;
-    },
-    updateFilterClass: (state, action) => {
-      state.filterClass = action.payload;
-    },
-    filterCompasity: (state, action) => {
-      state.filterCompasity = action.payload;
     },
     updateFilteredItems: (state, action) => {
       state.filteredItems = action.payload;
@@ -77,8 +65,11 @@ const washersSlice = createSlice({
     updateFilterClassTarget: (state, action) => {
       state.filterCLassTarget = action.payload
     },
-    updateFilterCompasityTarget: (state, action) => {
-      state.filterCompasityTarget = action.payload
+     updateFilterCapacityTarget: (state, action) => {
+      state.filterCapasityTarget = action.payload
+    },
+    updateFilterUsed: (state, action) => {
+      state.filterUsed = action.payload
     },
   },
 });
@@ -89,16 +80,14 @@ export const {
 
   updateNumberOfItemsSow,
   updateResultNumber,
-  updateFilterFunctions,
-  updateFilterClass,
-  filterCompasity,
 
   updateFilteredItems,
 
   updateProductNotMatch,
+  updateFilterUsed,
 
   updateFilterFunctionTarget,
   updateFilterClassTarget,
-  updateFilterCompasityTarget
+   updateFilterCapacityTarget
 } = washersSlice.actions;
 export default washersSlice.reducer;

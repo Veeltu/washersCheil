@@ -1,7 +1,5 @@
-import "./filter.css";
 import { useDispatch } from "react-redux";
 import { sort } from "../redux/slice";
-
 
 export default function Sort() {
   const dispatch = useDispatch();
@@ -21,8 +19,6 @@ export default function Sort() {
         <option value="price">price</option>
         <option value="capacity">capacity</option>
       </select>
-
-    
     </div>
   );
 }
