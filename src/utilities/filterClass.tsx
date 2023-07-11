@@ -1,4 +1,3 @@
-import "./search.css";
 import { useDispatch } from "react-redux";
 import { updateFilterUsed, updateFilterClassTarget } from "../redux/slice";
 
@@ -16,7 +15,7 @@ export default function FilterClass() {
         <h2> Klasa energetyczna: </h2>
       </div>
       <select onChange={(e) => handleFilter(e.target.value)}>
-        <option value="#">All</option>
+        <option value="#">Pokaż wszystkie</option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>

@@ -1,40 +1,52 @@
 import VectorArrow from "../assets/VectorArrow.png";
 import { useSelector, useDispatch } from "react-redux";
 import { useMemo, useState, useEffect } from "react";
-import { updateResultNumber } from "../redux/slice";
+import { updateDisplayedWashers, updateResultNumber } from "../redux/slice";
 import { updateProductNotMatch } from "../redux/slice";
 
 export default function Card() {
-  const productNotMatch = useSelector(
-    (state: any) => state.washers.productNotMatch
-  );
-  const washers = useSelector((state: any) => state.washers.washers);
-  const key = useSelector((state: any) => state.washers.sortKey);
-  const numberOfItemsShow = useSelector(
-    (state: any) => state.washers.numberOfItemsShow
-  );
-  const filterFunctionTarget = useSelector(
-    (state: any) => state.washers.filterFunctionTarget
-  );
-  const filterClassTarget = useSelector(
-    (state: any) => state.washers.filterCLassTarget
-  );
-  const filterCapasityTarget = useSelector(
-    (state: any) => state.washers.filterCapasityTarget
-  );
-  const filterUsed = useSelector((state: any) => state.washers.filterUsed);
+  interface Washer {
+    image:string;
+    title:string;
+    capacity:string;
+    measurements:string;
+    functions: Array<string>;
+    class:string;
+    valid:string;
+    price:string;
+    rates:string;
+    [key: string]: any;
+  }
+  interface State {
+    washers: {
+      productNotMatch: boolean;
+      searchedWashers: Washer[];
+      sortKey: string;
+      numberOfItemsShow: number;
+      filterFunctionTarget: string;
+      filterClassTarget: string;
+      filterCapasityTarget: string;
+      filterUsed: boolean;
+    };
+  }
+
+  const productNotMatch = useSelector((state: State) => state.washers.productNotMatch);
+  const searchedWashers= useSelector((state: State) => state.washers.searchedWashers)
+  const key = useSelector((state: State) => state.washers.sortKey);
+  const numberOfItemsShow = useSelector((state: State) => state.washers.numberOfItemsShow);
+  const filterFunctionTarget = useSelector((state: State) => state.washers.filterFunctionTarget);
+  const filterClassTarget = useSelector((state: State) => state.washers.filterClassTarget);
+  const filterCapasityTarget = useSelector((state: State) => state.washers.filterCapasityTarget);
+  const filterUsed = useSelector((state: State) => state.washers.filterUsed);
   const dispatch = useDispatch();
 
-  const [match, setMatch] = useState([]);
+  const [matched, setMatched] = useState<Washer[]>([]);
 
-  useEffect(() => {
-    setMatch(washers);
-  }, []);
+  //======= LOGIC
 
   const handleFilter = () => {
-    const match = washers.filter((item: any) => {
+    const match: Washer[] = searchedWashers.filter((item: any) => {
       const some =
-  
         (filterFunctionTarget !== "#"
           ? item.functions.includes(filterFunctionTarget)
           : true) &&
@@ -48,33 +60,29 @@ export default function Card() {
       return some;
     });
 
-    if (filterUsed == true && match.length == 0) {
-      console.log("BOOOOM");
-      dispatch(updateProductNotMatch(true));
-    } else if (filterUsed == true && match.length > 0) {
-      dispatch(updateProductNotMatch(false));
-      setMatch(match);
-    }
+    filterUsed === true && match.length == 0
+      ? dispatch(updateProductNotMatch(true))
+      : (dispatch(updateProductNotMatch(false)), setMatched(match));
   };
 
   useEffect(() => {
     handleFilter();
-  }, [filterFunctionTarget, filterClassTarget, filterCapasityTarget]);
+  }, [
+    filterFunctionTarget,
+    filterClassTarget,
+    filterCapasityTarget,
+    searchedWashers,
+  ]);
 
-  const sortedSearchedWashers = match.flat().sort((a: any, b: any) => {
-    if (a[key] < b[key]) return -1;
-    if (a[key] > b[key]) return 1;
-    return 0;
-  });
-
-  const displayedWashers = sortedSearchedWashers;
+  const sortedDisplayedWashers = matched.flat().sort((a, b) => a[key] - b[key]);
 
   useEffect(() => {
-    dispatch(updateResultNumber(displayedWashers.length));
-  }, [displayedWashers.length]);
+    productNotMatch === true ? dispatch(updateResultNumber(0)) : dispatch(updateResultNumber(sortedDisplayedWashers.length)); 
+    dispatch(updateDisplayedWashers(sortedDisplayedWashers))
+  }, [sortedDisplayedWashers]);
 
   const itemsToShow = useMemo(() => {
-    return displayedWashers.slice(0, numberOfItemsShow).map((e: any) => (
+    return sortedDisplayedWashers.slice(0, numberOfItemsShow).map((e: any) => (
       <div className="card" key={Math.random()}>
         <div className="image-container">
           <img src={e.image} id="img" />
@@ -117,7 +125,9 @@ export default function Card() {
         </div>
       </div>
     ));
-  }, [displayedWashers, numberOfItemsShow]);
+  }, [sortedDisplayedWashers, numberOfItemsShow]);
+
+  
 
   return (
     <>
@@ -125,11 +135,11 @@ export default function Card() {
         itemsToShow.length ? (
           itemsToShow
         ) : (
-          "Loading..."
+          "Washer not found..."
         )
       ) : (
         <div>
-          <h1>filter not match</h1>
+          <h1>filter not matched</h1>
         </div>
       )}
     </>

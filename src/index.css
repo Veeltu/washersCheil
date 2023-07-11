@@ -291,6 +291,11 @@ select {
   cursor: pointer;
 }
 
+.empty{
+  margin-top: 1.25rem;
+  margin-bottom: 3.38rem;
+}
+
 .result-number {
   margin: 1rem;
   color: #000;

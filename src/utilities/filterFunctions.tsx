@@ -1,10 +1,15 @@
-import "./search.css";
 import { useSelector, useDispatch } from "react-redux";
 import { updateFilterUsed, updateFilterFunctionTarget } from "../redux/slice";
 
+interface State {
+  washers: {
+    functionsList: string[];
+  }
+}
+
 export default function FilterFunctions() {
   const functionsList = useSelector(
-    (state: any) => state.washers.functionsList
+    (state: State) => state.washers.functionsList
   );
   const dispatch = useDispatch();
 
@@ -19,7 +24,7 @@ export default function FilterFunctions() {
         <h2> Funkcje: </h2>
       </div>
       <select onChange={(e) => handleFilter(e.target.value)}>
-        <option value="#">All</option>
+        <option value="#">Pokaż wszystkie</option>
         {functionsList.map((i: any) => (
           <option key={i} value={i}>
             {i}

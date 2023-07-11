@@ -10,25 +10,44 @@ washers.washers.forEach((washer) => {
   });
 });
 
-const functionArray = Array.from(allFunctions);
+const functionArray: Array<string> = Array.from(allFunctions);
 
-// ============================
+interface Washer {
+  image:string;
+  title:string;
+  capacity:string;
+  measurements:string;
+  functions: Array<string>;
+  class:string;
+  valid:string;
+  price:string;
+  rates:string
+}
 
-const initialState = {
-  washers: washers.washers,
+interface State {
+  washers: Washer[];
+  searchedWashers: Washer[];
+  displayedWashers: string;
+  filterFunctionTarget: string;
+  filterClassTarget: string;
+  filterCapasityTarget: string;
+  filterUsed: boolean;
+  productNotMatch: boolean;
+  functionsList: string[];
+  sortKey: string;
+  numberOfItemsShow: number;
+  resultNumber: number;
+}
 
-  searchedWashers: [] as any[],
-
+const initialState: State= {
+  washers: washers.washers as Washer[],
+  searchedWashers: washers.washers as Washer[],
+  displayedWashers: "",
   filterFunctionTarget: "#",
-  filterCLassTarget: "#",
+  filterClassTarget: "#",
   filterCapasityTarget: "#",
-
-  filteredItems: [] as any[],
-
   filterUsed: false,
-
   productNotMatch: false,
-
   functionsList: functionArray,
   sortKey: "",
   numberOfItemsShow: 3,
@@ -40,11 +59,7 @@ const washersSlice = createSlice({
   initialState,
   reducers: {
     search: (state, action) => {
-      state.searchedWashers = [];
-      state.searchedWashers.push(action.payload);
-    },
-    updateFilteredItems: (state, action) => {
-      state.filteredItems = action.payload;
+      state.searchedWashers = action.payload;
     },
     sort: (state, action) => {
       const key = action.payload;
@@ -57,19 +72,22 @@ const washersSlice = createSlice({
       state.resultNumber = action.payload;
     },
     updateProductNotMatch: (state, action) => {
-      state.productNotMatch = action.payload
+      state.productNotMatch = action.payload;
     },
     updateFilterFunctionTarget: (state, action) => {
-      state.filterFunctionTarget = action.payload
+      state.filterFunctionTarget = action.payload;
     },
     updateFilterClassTarget: (state, action) => {
-      state.filterCLassTarget = action.payload
+      state.filterClassTarget = action.payload;
     },
-     updateFilterCapacityTarget: (state, action) => {
-      state.filterCapasityTarget = action.payload
+    updateFilterCapacityTarget: (state, action) => {
+      state.filterCapasityTarget = action.payload;
     },
     updateFilterUsed: (state, action) => {
-      state.filterUsed = action.payload
+      state.filterUsed = action.payload;
+    },
+    updateDisplayedWashers: (state, action) => {
+      state.displayedWashers = action.payload;
     },
   },
 });
@@ -77,17 +95,13 @@ const washersSlice = createSlice({
 export const {
   search,
   sort,
-
   updateNumberOfItemsSow,
   updateResultNumber,
-
-  updateFilteredItems,
-
   updateProductNotMatch,
   updateFilterUsed,
-
+  updateDisplayedWashers,
   updateFilterFunctionTarget,
   updateFilterClassTarget,
-   updateFilterCapacityTarget
+  updateFilterCapacityTarget,
 } = washersSlice.actions;
 export default washersSlice.reducer;

@@ -1,15 +1,22 @@
 import "./App.css";
 import Card from "./comp/card";
-import Search from "./comp/search";
-import FilterFunctions from "./comp/filterFunctions";
-import FilterClass from "./comp/filterClass";
-import FilterCapacity from "./comp/filterCapacity";
-import Sort from "./comp/sort";
-import { ShowMoreButton } from "./comp/showMore";
+import Search from "./utilities/search";
+import FilterFunctions from "./utilities/filterFunctions";
+import FilterClass from "./utilities/filterClass";
+import FilterCapacity from "./utilities/filterCapacity";
+import Sort from "./utilities/sort";
+import { ShowMoreButton } from "./utilities/showMore";
 import { useSelector } from "react-redux";
 
+
+interface State {
+  washers: {
+    resultNumber: number;
+  }
+}
+
 function App() {
-  const resultNumber = useSelector((state: any)=> state.washers.resultNumber)
+  const resultNumber = useSelector((state: State)=> state.washers.resultNumber)
   return (
     <>
       <div className="app">

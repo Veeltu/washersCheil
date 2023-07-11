@@ -15,7 +15,7 @@ export default function Sort() {
         <h2> Sortuj po: </h2>
       </div>
       <select onChange={(e) => handleSort(e.target.value)}>
-        <option value="">All</option>
+        <option value="">Popularność</option>
         <option value="price">price</option>
         <option value="capacity">capacity</option>
       </select>
