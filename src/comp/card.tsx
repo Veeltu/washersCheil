@@ -4,31 +4,32 @@ import { useMemo, useState, useEffect } from "react";
 import { updateDisplayedWashers, updateResultNumber } from "../redux/slice";
 import { updateProductNotMatch } from "../redux/slice";
 
+interface Washer {
+  image:string;
+  title:string;
+  capacity:string;
+  measurements:string;
+  functions: Array<string>;
+  class:string;
+  valid:string;
+  price:string;
+  rates:string;
+  [key: string]: any;
+}
+interface State {
+  washers: {
+    productNotMatch: boolean;
+    searchedWashers: Washer[];
+    sortKey: string;
+    numberOfItemsShow: number;
+    filterFunctionTarget: string;
+    filterClassTarget: string;
+    filterCapasityTarget: string;
+    filterUsed: boolean;
+  };
+}
+
 export default function Card() {
-  interface Washer {
-    image:string;
-    title:string;
-    capacity:string;
-    measurements:string;
-    functions: Array<string>;
-    class:string;
-    valid:string;
-    price:string;
-    rates:string;
-    [key: string]: any;
-  }
-  interface State {
-    washers: {
-      productNotMatch: boolean;
-      searchedWashers: Washer[];
-      sortKey: string;
-      numberOfItemsShow: number;
-      filterFunctionTarget: string;
-      filterClassTarget: string;
-      filterCapasityTarget: string;
-      filterUsed: boolean;
-    };
-  }
 
   const productNotMatch = useSelector((state: State) => state.washers.productNotMatch);
   const searchedWashers= useSelector((state: State) => state.washers.searchedWashers)
@@ -126,8 +127,6 @@ export default function Card() {
       </div>
     ));
   }, [sortedDisplayedWashers, numberOfItemsShow]);
-
-  
 
   return (
     <>
