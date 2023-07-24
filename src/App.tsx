@@ -1,4 +1,3 @@
-import "./App.css";
 import Card from "./comp/card";
 import Search from "./utilities/search";
 import FilterFunctions from "./utilities/filterFunctions";

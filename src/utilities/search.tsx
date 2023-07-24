@@ -1,4 +1,3 @@
-import "../search.css";
 import { useSelector, useDispatch } from "react-redux";
 import { search } from "../redux/slice";
 
